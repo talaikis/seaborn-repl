@@ -41,8 +41,9 @@ def plot_monthly_heatmap(returns, name):
         ax = plt.gca()
         ax.set_title('Monthly returns, %', fontweight='bold')
         heatmap(returns, xticklabels=[i[1] for i in list(returns.columns)], annot=True, fmt='0.3f', annot_kws={'size': 8}, alpha=1.0, center=0.0, cbar=False, cmap=cm.RdYlGn, ax=ax, robust=True)
-        plt.savefig(join(BASE_DATA, '{}-monthly-returns.png'.format(name)), bbox_inches='tight')
-        plt.close()
+        # plt.savefig(join(BASE_DATA, '{}-monthly-returns.png'.format(name)), bbox_inches='tight')
+        # plt.close()
+        plt.show()
     except Exception as e:
         print('plot_monthly_heatmap', e)
 
