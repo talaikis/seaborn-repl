@@ -1,4 +1,3 @@
-from os import getenv
 from os.path import join, dirname, abspath
 
 from seaborn import heatmap
