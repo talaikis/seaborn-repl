@@ -1,19 +1,11 @@
 from os import getenv
 from os.path import join, dirname, abspath
-from datetime import datetime, timedelta
-from json import dump, load
-from ast import literal_eval
 
-from seaborn import heatmap, despine
+from seaborn import heatmap
 import matplotlib.pyplot as plt
 from matplotlib import cm
-from pandas.plotting import register_matplotlib_converters
-register_matplotlib_converters()
-from pandas import read_json, to_datetime, concat
+from pandas import read_json
 import seaborn as sns
-sns.set_style('darkgrid')
-sns.set_palette(sns.color_palette('RdBu', n_colors=5))
-BLUE1, = sns.color_palette('muted', 1)
 
 BASE_DATA = join(dirname(abspath(__file__)))
 fig_size = (9, 6)
